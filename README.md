@@ -55,8 +55,9 @@ To scrape data from different sources, we use BeautifulSoup and Mechanize.
 [CONTRIBUTING.md](https://github.com/a-sahdev/AirOnTime/blob/master/CONTRIBUTING.md)
 
 ## License 
+This project is Open Source, licensed under the MIT license, and there's a LICENSE.md in the repository.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">AirOnTime</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Amber Sahdev, Zac Codiamat</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+##### [LICENSE](LICENSE.md) 
 
 
 :octocat: :rocket: :tada:
