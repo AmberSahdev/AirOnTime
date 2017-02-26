@@ -150,7 +150,6 @@ class Scraper():
         depart_time, reliability = self.scrape_flight_info(airline, flight_number)
         flight_data = self.scrape_flight_times(depart_time, departure, arrival)
         results = []
-
         #build result list
         for flight in flight_data:
             result = flight #each result to be shown on one line of search.html
@@ -160,6 +159,7 @@ class Scraper():
                 continue
             result.append(depart_time)
             result.append(reliability)
+            print result
             results.append(result)
 
-        return sorted(results,key=lambda x: x[6], reverse=True), reliability
+        return sorted(results,key=lambda x: x[7], reverse=True), reliability
