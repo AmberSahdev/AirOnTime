@@ -37,7 +37,7 @@ To scrape data from different sources, we use BeautifulSoup and Mechanize.
 
 2. Source Code: [GitHub Repo](https://github.com/a-sahdev/AirOnTime)
 
-3. Devpost: [Devpost]()
+3. Devpost: [Devpost](https://devpost.com/software/airontime)
 
 
 
