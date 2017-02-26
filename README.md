@@ -12,10 +12,10 @@ http://www.aironti.me/
 
 You just enter your flight number, departure and arrival airport codes and hit search...
 
-![Front Page](/img/frontpage.png)
+![Front Page](/img/frontpage.jpeg)
 
 ##and voila!
-![Results Page](/img/searchresults.png)
+![Results Page](/img/searchresults.jpeg)
 
 
 
