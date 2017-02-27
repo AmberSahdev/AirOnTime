@@ -1,7 +1,7 @@
 The MIT License (MIT)
 =====================
 
-Copyright © `2017` `<copyright holders>`
+Copyright © `2017` `Amber Sahdev and Zachary Codiamat`
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
