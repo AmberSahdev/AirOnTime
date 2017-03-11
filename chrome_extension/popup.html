@@ -1,11 +1,19 @@
 <!doctype html>
 <!--
  This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
+ "browser_action" field in manifest.json contains the value "popup.html".
+-->
 <html>
   <head>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!--
+    for dropdowns
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>AirOnTime Extension's Popup</title>
     <style>
       body {
@@ -13,7 +21,7 @@
         font-size: 100%;
       }
       #status {
-        /* avoid an excessively wide status text */
+
         white-space: pre;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -21,16 +29,56 @@
       }
     </style>
 
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
     <script src="popup.js"></script>
   </head>
+
   <body>
     <div id="status"></div>
+    <h3>AirOnTime </h3>
+
+    <form class="form-inline" method="post">
+      <select class = "opacity" style="width: 287px;">
+      <option value="select">Select Airlines</option>
+      <option value="united">United Airlines</option>
+      <option value="american">American Airlines</option>
+      <option value="alaska">Alaska Airlines</option>
+      <option value="continental">Continental Airlines</option>
+      <option value="delta">Delta Airlines</option>
+      <option value="frontier">Frontier Airlines</option>
+      <option value="jetblue">JetBlue Airlines</option>
+      <option value="southwest">Southwest Airlines</option>
+      <option value="spirit">Spirit Airlines </option>
+      <option value="virgin">Virgin Atlantic</option>
+      </select>
+
+      <br>
+
+      <div class ="btn-group">
+        <div class="input-group form-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-plane"></i></span>
+          <p><input id="Flight Number" type="text" class="form-control" name="Flight Number" placeholder="Flight Number" style="width: 250px;" maxlength="12"></p>
+        </div>
+      </div>
+      <div class ="btn-group form-inline" >
+        <div class="input-group form-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-arrow-up"></i></span>
+          <input id="departure" type="text" class="form-control" name="departure" placeholder="Departure Code" style="width: 250px;" maxlength="3">
+        </div>
+      </div>
+      <div class ="btn-group form-inline">
+        <div class="input-group form-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-arrow-down"></i></span>
+          <input id="arrival" type="text" class="form-control" name="arrival" placeholder="Arrival Code" style="width: 250px;" maxlength="3">
+        </div>
+      </div>
+      <div class="btn-group">
+        <a href="search.html"><button type="submit" class="btn btn-primary btn-lg">
+        Search </button> </a>
+      </div>
+
+    </form>
+
+
     <img id="image-result" hidden>
   </body>
 </html>
