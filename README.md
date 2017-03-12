@@ -24,7 +24,7 @@ You just enter your flight number, departure and arrival airport codes and hit s
 At the heart of this web application is the simplistic approach to getting information so that **you**, the user, can make an informed choice without spending too much time on it. 
 
 
-The frontend is the usual HTML, CSS, Javascript with Bootstrap and Material Design for Bootstrap.
+The frontend is Bootstrap and Material Design for Bootstrap.
 
 The backend is built with Python 2.7 and Django 1.10.5 . 
 To scrape data from different sources, we use BeautifulSoup and Mechanize. 
@@ -46,7 +46,7 @@ To scrape data from different sources, we use BeautifulSoup and Mechanize.
 
 - [ ] Ability to view alternative options for just a specific airlines
 
-- [ ] Ability to share your itinerary with friends on social media
+- [ ] A firefox extension
 
 - [ ] Also, more items in this list!
 
@@ -55,7 +55,7 @@ To scrape data from different sources, we use BeautifulSoup and Mechanize.
 [CONTRIBUTING.md](https://github.com/a-sahdev/AirOnTime/blob/master/CONTRIBUTING.md)
 
 ## License 
-This project is Open Source, licensed under the MIT license, and there's a LICENSE.md in the repository.
+
 
 ##### [LICENSE](LICENSE.md) 
 
