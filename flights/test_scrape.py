@@ -1,5 +1,5 @@
-from scrape import Scraper
+from fs_api import Flights
 
-scraper = Scraper()
-
-scraper.scrape_sort('NK','762','ATL','ORD')
+flights = Flights()
+rating = flights.get_rating('UA', '225', 'ORD')
+print(rating)

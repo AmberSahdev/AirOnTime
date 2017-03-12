@@ -20,7 +20,7 @@ def index(request):
         depart_time, reliability = scraper.scrape_flight_info(airline, flight_id)
 
         if reliability is not None:
-            return HttpResponseRedirect('/search/flight={0}&departure={1}&arrival={2}&airline={3}'.format(flight_id, departure, arrival, airline))
+            search(request, flight_id, departure, arrival, airline)
 
         messages.add_message(request, messages.ERROR, 'Invalid flight information')
 
