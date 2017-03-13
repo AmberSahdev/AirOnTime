@@ -155,3 +155,9 @@ h1,
   width:139px;
   height:35px;
 }
+
+#footer{
+ position:fixed;
+ bottom:0;
+ left:0;
+}

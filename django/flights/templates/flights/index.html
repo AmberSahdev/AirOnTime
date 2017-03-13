@@ -6,119 +6,87 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
-<link href="{% static "css/custom.css" %}" rel="stylesheet">
-
-<!--
-for dropdowns
--->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <title>AirOnTime</title>
-
+  <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+  <link href="{% static "css/custom.css" %}" rel="stylesheet">
+  <!--
+  for dropdowns
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>AirOnTime</title>
 </head>
 
 <body>
-          {% if messages %}
-          {% for message in messages %}
-            <div class="alert alert-danger text-center">
-                {{ message }}
-            </div>
-          {% endfor %}
-          {% endif %}
+
+    {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-danger text-center">
+        {{ message }}
+      </div>
+    {% endfor %}
+    {% endif %}
 
 
-<div>
-<h1 align="left" > <a href = "/"> AirOnTime </a> </h1>
-</div>
-
-<br><br>
-
-<form class="form-inline" method="post"> {% csrf_token %}
-<select class = "opacity" name="airline">
-  <option value="select">Select Airlines</option>
-  <option value="UA">United Airlines</option>
-  <option value="AA">American Airlines</option>
-  <option value="AS">Alaska Airlines</option>
-  <option value="DL">Delta Airlines</option>
-  <option value="F9">Frontier Airlines</option>
-  <option value="B6">JetBlue Airlines</option>
-  <option value="WN">Southwest Airlines</option>
-  <option value="NK">Spirit Airlines </option>
-  <option value="VX">Virgin Atlantic</option>
-
-
-</select>
-<!--
-  <div class="dropdown form-group">
-    <button type="button" class="btn btn-primary btn-lg dropdown-toggle"
-    data-toggle="dropdown" > Choose Airlines <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-      <li><a href="#"> United Airlines </a></li>
-      <li><a href="#"> American Airlines </a></li>
-      <li><a href="#"> Emirates </a></li>
-    </ul>
-  </div>
--->
-
-  <div class ="btn-group">
-
-        <div class="input-group form-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-plane"></i></span>
-          <p><input id="Flight Number" type="text" class="form-control" name="flight" placeholder="Flight Number" style="width: 300px;" maxlength="12"></p>
-        </div>
-
+  <div>
+    <h1 align="left" > <a href = "/"> AirOnTime </a> </h1>
   </div>
 
+  <br><br>
 
-</div>
+  <form class="form-inline" method="post"> {% csrf_token %}
+    <select class = "opacity" name="airline">
+      <option value="select">Select Airlines</option>
+      <option value="UA">United Airlines</option>
+      <option value="AA">American Airlines</option>
+      <option value="AS">Alaska Airlines</option>
+      <option value="DL">Delta Airlines</option>
+      <option value="F9">Frontier Airlines</option>
+      <option value="B6">JetBlue Airlines</option>
+      <option value="WN">Southwest Airlines</option>
+      <option value="NK">Spirit Airlines </option>
+      <option value="VX">Virgin Atlantic</option>
+    </select>
 
-<br>
+    <div class ="btn-group">
+      <div class="input-group form-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-plane"></i></span>
+        <p><input id="Flight Number" type="text" class="form-control" name="flight" placeholder="Flight Number" style="width: 300px;" maxlength="4"></p>
+      </div>
+    </div>
 
-<div class ="btn-group form-inline" >
+  <br>
 
+    <div class ="btn-group form-inline" >
       <div class="input-group form-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-arrow-up"></i></span>
         <input id="departure" type="text" class="form-control" name="departure" placeholder="Departure Code" style="width: 200px;" maxlength="3">
       </div>
+    </div>
 
-</div>
-
-<div class ="btn-group form-inline">
-
+    <div class ="btn-group form-inline">
       <div class="input-group form-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-arrow-down"></i></span>
         <input id="arrival" type="text" class="form-control" name="arrival" placeholder="Arrival Code" style="width: 200px;" maxlength="3">
       </div>
-
-</div>
-
-<br><br>
-
-<div class="btn-group">
-  <a href="search.html"><button type="submit" class="btn btn-primary btn-lg ">
-     Search </button> </a>
-</div>
-
-</div>
-
-</form>
-
-
-
-<div style=" width: 600px; height: 465px;">
-    <div style="text-align:left; position: absolute; bottom: 5px;">
-      <p class = "h6">Created by <a href="https://github.com/a-sahdev" target="_blank">Amber Sahdev</a> and
-      <a href="https://github.com/zacode11" target="_blank">Zac Codiamat</a> <p>
     </div>
-</div>
 
+  <br><br>
 
+    <div class="btn-group">
+      <a href="search.html"><button type="submit" class="btn btn-primary btn-lg">
+         Search </button> </a>
+    </div>
 
+  </form>
+
+  <br>
+
+  <footer>
+    <p class = "h6">Created by<a href="https://github.com/a-sahdev" target="_blank">Amber Sahdev</a> and
+    <a href="https://github.com/zacode11" target="_blank"> Zac Codiamat</a></p>
+  </footer>
 
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -128,6 +96,6 @@ for dropdowns
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="{% static "js/bootstrap.min.js" %}"></script>
-</body>
 
+</body>
 </html>
