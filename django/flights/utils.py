@@ -52,4 +52,4 @@ def get_search_info(airline, flight_id, departure):
         flight.append(full_name)
         flight.append(url)
         results.append(flight)
-    return rating[0], results
+    return rating[0], sorted(results,key=lambda x: x[2], reverse=True)
