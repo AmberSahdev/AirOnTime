@@ -5,6 +5,9 @@ from datetime import datetime
 
 import utils
 
+#Depreciated. No longer using web scraping method for getting flight info.
+#Replaced by key_info.py
+
 class Scraper():
     br = mechanize.Browser()
     #list of supported airlines

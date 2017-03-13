@@ -6,7 +6,6 @@ from datetime import datetime
 
 from .forms import SearchForm
 
-from scrape import Scraper
 import utils
 
 def index(request):
@@ -16,28 +15,22 @@ def index(request):
         arrival = request.POST['arrival'].upper()
         flight_id = request.POST['flight']
 
-        scraper = Scraper()
-        depart_time, reliability = scraper.scrape_flight_info(airline, flight_id)
-
-        if reliability is not None:
-            search(request, flight_id, departure, arrival, airline)
-
-        messages.add_message(request, messages.ERROR, 'Invalid flight information')
-
+        return search(request, flight_id, departure, arrival, airline)
 
     return render(request, 'flights/index.html')
 
 def search(request, flight_id, departure, arrival, airline):
-    scraper = Scraper()
-    results, reliability = scraper.scrape_sort(airline, flight_id, departure, arrival)
+    rating, results = utils.get_search_info(airline, flight_id, departure)
+    if rating is None:
+        messages.add_message(request, messages.ERROR, 'Invalid flight information')
+        index(request)
     airline = utils.to_full_name(airline)
-    print airline
     context = {
         'flight_id': flight_id,
         'departure': departure,
         'arrival': arrival,
         'airline': airline,
-        'reliability': reliability,
+        'rating': rating,
         'results': results,
     }
     return render(request, 'flights/search.html', context)

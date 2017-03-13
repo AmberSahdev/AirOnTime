@@ -36,7 +36,7 @@
     <p><i>From: </i>{{departure}} <i>To: </i>{{arrival}}</p>
     <hr class="m-y-2">
     <p class="lead">
-      <p>On time reliability: <b> {{reliability}}% </b></p>
+      <p>On time reliability: <b> {{rating}}% </b></p>
     </p>
   </div>
 
@@ -47,7 +47,7 @@
 
   <div class="list-group">
 
-    {% for flight_id, depart, arrive, url, airline, book_url, date, rating in results %}
+    {% for airline, flight_id, rating, airline_name, url in results %}
   <div class="list-group-separator"></div>
   <div class="list-group-item panel panel-default">
     <div class "panel-heading">
@@ -55,11 +55,11 @@
       <img class="circle" src="/static/img/{{airline}}.jpeg" alt="icon">
     </div>
     <div class="row-content">
-      <h4 class="list-group-item-heading"> {{airline}} {{ flight_id }}</h4>
+      <h4 class="list-group-item-heading">{{airline_name}} {{airline}} {{ flight_id }}</h4>
 
-      <p class="list-group-item-text"><i>From: {{departure}} To: {{arrival}}</i></p>
+      <p class="list-group-item-text"><i>From: {{departure}} To {{arrival}}</i></p>
       <p class="list-group-item-text">On time reliability: {{rating}}% </p>
-      <p class="list-group-item-text">Departs at {{depart}}</p>
+      <!-- <p class="list-group-item-text">Departs at {{depart}}</p> -->
       <a href= "{{book_url}}" target="_blank"><p class="list-group-item-text badge">Book it</p> </a>
     </div>
     <div class = "panel-footer">

@@ -1,5 +1,5 @@
-from fs_api import Flights
+from fs_api import FlightInfo
+import utils
 
-flights = Flights()
-rating = flights.get_rating('UA', '225', 'ORD')
-print(rating)
+info = utils.get_search_info('VX', '241', 'ORD')
+print(info)
