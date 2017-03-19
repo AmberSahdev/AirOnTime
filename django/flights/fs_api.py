@@ -30,7 +30,6 @@ class FlightInfo():
         .format(airline, flight_id, self.app_id, self.api_key, departure))
         response = urllib2.urlopen(url)
         data = json.loads(response.read())
-        print data
         if 'ratings' in data.keys():
             #check if too little data on flight
             if int(data['ratings'][0]['observations']) < 5:

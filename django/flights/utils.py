@@ -42,7 +42,6 @@ def get_search_info(airline, flight_id, departure):
     """
     flight_info = FlightInfo()
     rating = flight_info.get_rating(airline, flight_id, departure)
-    print rating
     if rating is None:
         return None, None
 
@@ -56,5 +55,4 @@ def get_search_info(airline, flight_id, departure):
         flight.append(full_name)
         flight.append(url)
         results.append(flight)
-        print sorted(results,key=lambda x: x[2], reverse=True)
     return rating[0], sorted(results,key=lambda x: x[2], reverse=True)
