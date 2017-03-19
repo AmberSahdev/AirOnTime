@@ -15,22 +15,29 @@ def index(request):
         arrival = request.POST['arrival'].upper()
         flight_id = request.POST['flight']
 
-        return search(request, flight_id, departure, arrival, airline)
+        return HttpResponseRedirect('/search/?flight={0}&departure={1}&arrival={2}&airline={3}'.format(flight_id,departure,arrival,airline))
 
     return render(request, 'flights/index.html')
 
-def search(request, flight_id, departure, arrival, airline):
-    rating, results = utils.get_search_info(airline, flight_id, departure)
-    if rating is None:
-        messages.add_message(request, messages.ERROR, 'Invalid flight information')
-        index(request)
-    airline = utils.to_full_name(airline)
-    context = {
-        'flight_id': flight_id,
-        'departure': departure,
-        'arrival': arrival,
-        'airline': airline,
-        'rating': rating,
-        'results': results,
-    }
-    return render(request, 'flights/search.html', context)
+def search(request):
+    if 'flight' in request.GET:
+        flight_id = request.GET.get('flight').strip().upper()
+        departure = request.GET.get('departure').strip().upper()
+        arrival = request.GET.get('arrival').strip().upper()
+        airline = request.GET.get('airline').strip().replace('/','').upper()
+        rating, results = utils.get_search_info(airline, flight_id, departure)
+        if rating is None:
+            messages.add_message(request, messages.ERROR, 'Invalid flight information')
+            return HttpResponseRedirect('/')
+        airline = utils.to_full_name(airline)
+        context = {
+            'flight_id': flight_id,
+            'departure': departure,
+            'arrival': arrival,
+            'airline': airline,
+            'rating': rating,
+            'results': results,
+        }
+        return render(request, 'flights/search.html', context)
+    else:
+        return HttpResponseRedirect('/')

@@ -1,2 +1,3 @@
 *.pyc
 key_info.py
+secret_key.py
