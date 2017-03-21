@@ -25,16 +25,16 @@
 <body>
 
 <div>
-<h1 ><a href = "/"><i>AirOnTime</i> </a></h1>
+<h1><a href = "/"><i>AirOnTime</i></a></h1>
 </div>
 
   <div class="jumbotron"/>
     <h2 class="h2">{{airline}}</h2>
     <p class="lead"><i>Flight Number: {{flight_id}}</i></p>
-    <p><i>From: </i>{{departure}} <i>To: </i>{{arrival}}</p>
+    <p><i>From:</i> {{departure}} <i>To:</i> {{arrival}}</p>
     <hr class="m-y-2">
     <p class="lead">
-      <p>On time reliability: <b> {{rating}}% </b></p>
+      <h3 font-size = "35">On time reliability: <b> {{rating}}% </b></h3>
     </p>
   </div>
 
@@ -47,32 +47,33 @@
   {% for airline, flight_id, rating, airline_name, url in results %}
   <div class="list-group-separator"></div>
   <div class="list-group-item panel panel-default">
-  <div class "panel-heading">
+  <!--<div class "panel-heading"> -->
     <div class="row-picture">
-    <img class="circle" src="/static/img/{{airline}}.jpeg" alt="icon">
+      <img class="circle" src="/static/img/{{airline}}.jpeg" alt="icon">
     </div>
 
     <div class="row-content">
       <h4 class="list-group-item-heading">{{airline_name}} {{airline}} {{ flight_id }}</h4>
 
-      <p class="list-group-item-text"><i>From: {{departure}} To {{arrival}}</i></p>
+      <p class="list-group-item-text"><i>From: {{departure}} To: {{arrival}}</i></p>
       <p class="list-group-item-text">On time reliability: {{rating}}% </p>
       <!-- <p class="list-group-item-text">Departs at {{depart}}</p> -->
       <a href= "{{url}}" target="_blank"><p class="list-group-item-text badge">Book it</p> </a>
     </div>
 
     <div class = "panel-footer">
-    <div class="progress">
+    <div class="progress"  padding-bottom="10px">
     <div class="progress-bar" role="progressbar" aria-valuenow="70"
-    aria-valuemin="0" aria-valuemax="100" style="width:{{rating}}%">
-      70%
+    aria-valuemin="3" aria-valuemax="100" style="width:{{rating}}%" padding-box = "10px">
+    60%
     </div>
     </div>
     </div>
   </div>
-  </div>
+  <!--</div> -->
   {% endfor %}
 
+  <p ><a href ="" > Next >> <a></p>
   </div>
 </div>
 

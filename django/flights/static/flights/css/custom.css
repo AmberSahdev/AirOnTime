@@ -6,14 +6,14 @@ html {
 body {
 
   margin-left: 16px;
-  background-size:100%,100%;
+
   background-repeat: no-repeat;
   text-align: center;
   position: relative;
   top: 50%;
   left: 0;
   right: 0;
-  background-attachment: fixed;
+  background-attachment: cover;
   background-image: url(../img/1.jpeg);
 
 }
@@ -79,9 +79,9 @@ input[type="search"]::-webkit-search-decoration {
 
 .btn {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 8px 14px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: normal;
     line-height: 1.42857143;
     text-align: center;
@@ -154,4 +154,29 @@ h1,
   opacity: 0.5;
   width:139px;
   height:35px;
+}
+
+
+
+#container {
+   min-height:100%;
+   position:relative;
+   padding-left: 10px;
+
+}
+#header {
+   background:#ff0;
+   padding:10px;
+}
+#body {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+#footer {
+   position:absolute;
+   bottom:0;
+   padding: 12px 12px;
+   width:90%;
+   height:60px;   /* Height of the footer */
+   background:#6cf;
 }
