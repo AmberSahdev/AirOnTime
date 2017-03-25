@@ -14,7 +14,7 @@ You just enter your flight number, departure and arrival airport codes and hit s
 
 ![Front Page](/img/frontpage.jpeg)
 
-##and voila!
+## and voila!
 ![Results Page](/img/searchresults.jpeg)
 
 
@@ -31,7 +31,7 @@ To scrape data from different sources, we use BeautifulSoup and Mechanize.
 
 
 
-##General Information:
+## General Information:
 
 1. Website: [AirOnTime](http://www.aironti.me/)
 
@@ -41,12 +41,10 @@ To scrape data from different sources, we use BeautifulSoup and Mechanize.
 
 
 
-##Possible Features for the Future: 
+## Possible Features for the Future: 
 - [ ] A Chrome Extension 
 
 - [ ] Ability to view alternative options for just a specific airlines
-
-- [ ] A firefox extension
 
 - [ ] Also, more items in this list!
 
