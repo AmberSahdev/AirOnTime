@@ -1,4 +1,4 @@
-from fs_api import FlightInfo
+from .fs_api import FlightInfo
 
 #a collection of utility functions to be used in views.py
 def to_full_name(short):

@@ -1,5 +1,4 @@
 appdirs==1.4.2
-BeautifulSoup==3.2.1
 Django==1.10.5
 gunicorn==19.6.0
 mechanize==0.2.5

@@ -11,70 +11,89 @@
   {% endif %}
 
 
-  <div>
-    <h1 align="left" ><a href = "/"> AirOnTime </a></h1>
-  </div>
 
-  <br><br>
-
-  <form class="form-inline" method="post"> {% csrf_token %}
-    <select class = "opacity" name="airline">
-      <option value="select">Select Airlines</option>
-      <option value="UA">United Airlines</option>
-      <option value="AA">American Airlines</option>
-      <option value="AS">Alaska Airlines</option>
-      <option value="DL">Delta Airlines</option>
-      <option value="F9">Frontier Airlines</option>
-      <option value="B6">JetBlue Airlines</option>
-      <option value="WN">Southwest Airlines</option>
-      <option value="NK">Spirit Airlines </option>
-      <option value="VX">Virgin Atlantic</option>
-    </select>
-
-    <div class ="btn-group">
-      <div class="input-group form-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-plane"></i></span>
-        <p><input id="Flight Number" type="text" class="form-control" name="flight" placeholder="Flight Number" style="width: 300px;" maxlength="4"></p>
-      </div>
+    <div>
+      <h1 align="left" ><a href = "/"> AirOnTime </a></h1>
     </div>
+
+    <br><br>
+    <h3 style="color:#0066cc">Enter your flight information</h3>
+
+
+    <form class="form-inline" method="post"> {% csrf_token %}
+      <select class = "opacity" name="airline">
+        <option value="select">Select Airlines</option>
+        <option value="UA">United Airlines</option>
+        <option value="AA">American Airlines</option>
+        <option value="AS">Alaska Airlines</option>
+        <option value="DL">Delta Airlines</option>
+        <option value="F9">Frontier Airlines</option>
+        <option value="B6">JetBlue Airlines</option>
+        <option value="WN">Southwest Airlines</option>
+        <option value="NK">Spirit Airlines </option>
+        <option value="VX">Virgin Atlantic</option>
+      </select>
+
+      <div class ="btn-group">
+        <div class="input-group form-group">
+          <span class="input-group-addon">
+             <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
+          </span>
+          <input id="Flight Number" type="text" class="form-control" name="flight" placeholder="Flight Number" style="width: 296px;" maxlength="4">
+        </div>
+      </div>
+
+    <br>
+
+      <div class ="btn-group form-inline" >
+        <div class="input-group form-group">
+          <span class="input-group-addon">
+            <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+          </span>
+          <input id="departure" type="text" class="form-control" name="departure" placeholder="Departure Code" style="width: 200px;" maxlength="3">
+        </div>
+      </div>
+
+      <div class ="btn-group form-inline">
+        <div class="input-group form-group">
+          <span class="input-group-addon">
+            <span class="glyphicon glyphicon-arrow-down"></span>
+          </span>
+          <input id="arrival" type="text" class="form-control" name="arrival" placeholder="Arrival Code" style="width: 200px;" maxlength="3">
+        </div>
+      </div>
+
+    <br><br>
+
+      <div class="btn-group">
+        <a href="search.html"><button type="submit" class="btn btn-primary btn-lg" font-size = 16px>
+           Search for
+           <br>
+           <b>On Time Reliability</b></button> </a>
+      </div>
+
+    </form>
 
   <br>
 
-    <div class ="btn-group form-inline" >
-      <div class="input-group form-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-arrow-up"></i></span>
-        <input id="departure" type="text" class="form-control" name="departure" placeholder="Departure Code" style="width: 200px;" maxlength="3">
-      </div>
-    </div>
 
-    <div class ="btn-group form-inline">
-      <div class="input-group form-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-arrow-down"></i></span>
-        <input id="arrival" type="text" class="form-control" name="arrival" placeholder="Arrival Code" style="width: 200px;" maxlength="3">
-      </div>
-    </div>
-
-  <br><br>
-
-    <div class="btn-group">
-      <a href="search.html"><button type="submit" class="btn btn-primary btn-lg" font-size = 16px>
-         Search for
-         <br>
-         <b>On Time Reliability</b></button> </a>
-    </div>
-
-  </form>
-
-  <br>
-
-  <div id="container">
-     <div id="header"></div>
-     <div id="body"></div>
+  <div id="container-fluid">
+     <!--<div id="header"></div>
+     <div id="body"> </div> -->
      <div id="footer">
-      <p class="h6" >Created by <a href="https://github.com/a-sahdev" target="_blank">Amber Sahdev</a> and
+      <p class="h5" style="margin-left:10px;">Created by <a href="https://github.com/a-sahdev" target="_blank">Amber Sahdev</a> and
       <a href="https://github.com/zacode11" target="_blank"> Zac Codiamat</a></p>
     </div>
-</div>
+  </div>
+
+<!--
+<footer>
+  <div class="container-fluid" style='margin-left:15px'>
+    <p>Created by <a href="https://github.com/a-sahdev" target="_blank">Amber Sahdev</a> and
+    <a href="https://github.com/zacode11" target="_blank"> Zac Codiamat</a></p>
+  </div>
+</footer>
+-->
 
 
 {% endblock %}

@@ -6,7 +6,7 @@ from datetime import datetime
 
 from .forms import SearchForm
 
-import utils
+from . import utils
 
 def index(request):
     if request.method == 'POST':
