@@ -15,6 +15,7 @@ body {
   right: 0;
   background-attachment: cover;
   background-image: url(../img/1.jpeg);
+  background-size: contain;
 
 }
 
@@ -81,7 +82,7 @@ input[type="search"]::-webkit-search-decoration {
     display: inline-block;
     padding: 8px 14px;
     margin-bottom: 0;
-    font-size: 17px;
+    font-size: 25px;
     font-weight: normal;
     line-height: 1.42857143;
     text-align: center;
@@ -114,7 +115,7 @@ text-align: center;
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
-  font-size: 14px;
+  font-size: 20px;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -179,4 +180,21 @@ h1,
    width:90%;
    height:60px;   /* Height of the footer */
    background:#6cf;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%;
+  font-size: 40px;
+
 }
