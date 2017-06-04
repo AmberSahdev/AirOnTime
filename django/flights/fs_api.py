@@ -1,6 +1,6 @@
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 import json
-import key_info
+from . import key_info
 from datetime import datetime
 
 class FlightInfo():
@@ -28,9 +28,9 @@ class FlightInfo():
         url = ("https://api.flightstats.com/flex/ratings/rest/v1/json/flight/"
         "{0}/{1}?appId={2}&appKey={3}&departureAirport={4}"
         .format(airline, flight_id, self.app_id, self.api_key, departure))
-        response = urllib2.urlopen(url)
+        response = urllib.request.urlopen(url)
         data = json.loads(response.read())
-        if 'ratings' in data.keys():
+        if 'ratings' in list(data.keys()):
             #check if too little data on flight
             if int(data['ratings'][0]['observations']) < 5:
                 return None
@@ -54,7 +54,7 @@ class FlightInfo():
         url = ("https://api.flightstats.com/flex/schedules/rest/v1/json/from/"
         "{0}/to/{1}/departing/{2}/{3}/{4}?appId={5}&appKey={6}"
         .format(departure, arrival, today.year, today.month, today.day, self.app_id, self.api_key))
-        response = urllib2.urlopen(url)
+        response = urllib.request.urlopen(url)
         data = json.loads(response.read())
         flight_ratings = []
         for flight in data['scheduledFlights']:
