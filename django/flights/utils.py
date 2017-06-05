@@ -10,7 +10,13 @@ def to_full_name(short):
            'B6' : 'Jet Blue Airlines',
            'WN' : 'SouthWest Airlines',
            'NK' : 'Spirit Airlines',
-           'VX' : 'Virgin Atlantic'
+           'VX' : 'Virgin Atlantic',
+           'AC' : 'Air Canada',
+           'CO' : 'Continental Airlines',
+           'G4' : 'Allegiant Air',
+           'HA' : 'Hawaiian Airlines',
+           'MQ' : 'Envoy Air',
+           'OO' : 'SkyWest Airlines'
            }
     return names[short]
 

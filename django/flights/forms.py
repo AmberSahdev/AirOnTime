@@ -1,6 +1,6 @@
 from django import forms
 
-supported_airlines = ['UA', 'AA', 'NK', 'B6', 'WN', 'VX', 'F9', 'CO', 'AS', 'DL']
+supported_airlines = ['AA', 'AC', 'AS', 'B6', 'CO', 'DL', 'F9', 'G4', 'HA', 'MQ', 'NK', 'OO', 'UA', 'VX', 'WN']
 AIRLINES = (
     ('AA', 'American Airlines'),
     ('AC', 'Air Canada'),
