@@ -2,16 +2,21 @@ from django import forms
 
 supported_airlines = ['UA', 'AA', 'NK', 'B6', 'WN', 'VX', 'F9', 'CO', 'AS', 'DL']
 AIRLINES = (
-    ('UA','United Airlines'),
     ('AA', 'American Airlines'),
-    ('NK', 'Spirit Airlines'),
-    ('B6', 'JetBlue Airways'),
-    ('WN', 'SouthWest Airlines'),
-    ('VN', 'Virgin America'),
-    ('F9', 'Frontier Airlines'),
-    ('CO', 'Continental Airlines'),
+    ('AC', 'Air Canada'),
     ('AS', 'Alaska Airlines'),
-    ('DL', 'Delta Airlines')
+    ('B6', 'JetBlue Airways'),
+    ('CO', 'Continental Airlines'),
+    ('DL', 'Delta Airlines'),
+    ('F9', 'Frontier Airlines'),
+    ('G4', 'Allegiant Air'),
+    ('HA', 'Hawaiian Airlines'),
+    ('MQ', 'Envoy Air'),
+    ('NK', 'Spirit Airlines'),
+    ('OO', 'SkyWest Airlines'),
+    ('UA','United Airlines'),
+    ('VX', 'Virgin America'),
+    ('WN', 'SouthWest Airlines')
 )
 
 class SearchForm(forms.Form):
