@@ -1,28 +1,4 @@
-<!DOCTYPE HTML>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Material Design fonts -->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
-
-    <!-- Bootstrap -->
-    <link href="{% static "flights/css/bootstrap.min.css" %}" rel="stylesheet">
-
-    <!-- Bootstrap Material Design -->
-    <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap-material-design.min.css" %}">
-    <link rel="stylesheet" type="text/css" href="{% static "css/ripples.min.css" %}">
-    <link rel="stylesheet" type="text/css" href="{% static "css/searchcustom.css" %}">
-
-<title>AirOnTime Search Results</title>
-</head>
-
-<body>
+{% extends "flights/header.html" %}
 
 <div>
 <h1><a href = "/"><i>AirOnTime</i></a></h1>
@@ -84,5 +60,4 @@
   <a href="https://github.com/zacode11" target="_blank"> Zac Codiamat </a></p>
 </footer>
 
-</body>
-</html>
+{% endblock %}
