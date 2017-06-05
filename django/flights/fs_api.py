@@ -8,7 +8,7 @@ class FlightInfo():
     api_key = key_info.api_key
     app_id = key_info.app_id
 
-    supported_airlines = ['UA', 'AA', 'NK', 'B6', 'WN', 'VX', 'F9', 'CO', 'AS', 'DL']
+    supported_airlines = ['AA', 'AC', 'AS', 'B6', 'CO', 'DL', 'F9', 'G4', 'HA', 'MQ', 'NK', 'OO', 'UA', 'VX', 'WN']
 
     if __name__ == '__main__':
         pass
