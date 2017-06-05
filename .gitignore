@@ -5,6 +5,7 @@ secret_key.py
 # Misc Files
 *.pdf
 *.docx
+*.bak
 
 # Prerequisites
 *.d
