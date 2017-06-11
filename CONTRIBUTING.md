@@ -1,4 +1,4 @@
-#Contibuting to AirOnTime
+# Contibuting to AirOnTime
 
 Thanks for your interest in our project!
 
