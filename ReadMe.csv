@@ -1,0 +1,15 @@
+SYS_FIELD_NAME, FIELD_DESC
+YEAR,Year
+MONTH,Month
+FL_DATE,Flight Date (yyyymmdd)
+UNIQUE_CARRIER,"Unique Carrier Code. When the same code has been used by multiple carriers, a numeric suffix is used for earlier users, for example, PA, PA(1), PA(2). Use this field for analysis across a range of years."
+CARRIER,"Code assigned by IATA and commonly used to identify a carrier. As the same code may have been assigned to different carriers over time, the code is not always unique. For analysis, use the Unique Carrier Code."
+FL_NUM,Flight Number
+ORIGIN_AIRPORT_ID,"Origin Airport, Airport ID. An identification number assigned by US DOT to identify a unique airport.  Use this field for airport analysis across a range of years because an airport can change its airport code and airport codes can be reused."
+ORIGIN,Origin Airport
+DEST_AIRPORT_ID,"Destination Airport, Airport ID. An identification number assigned by US DOT to identify a unique airport.  Use this field for airport analysis across a range of years because an airport can change its airport code and airport codes can be reused."
+DEST,Destination Airport
+DEP_DELAY_NEW,Difference in minutes between scheduled and actual departure time. Early departures set to 0.
+ARR_DELAY_NEW,Difference in minutes between scheduled and actual arrival time. Early arrivals set to 0.
+CANCELLED,Cancelled Flight Indicator (1=Yes)
+DIVERTED,Diverted Flight Indicator (1=Yes)

@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['airontime.herokuapp.com','127.0.0.1','aironti.me','www.aironti
 # Application definition
 
 INSTALLED_APPS = [
+    'flights',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
