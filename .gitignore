@@ -36,3 +36,6 @@ secret_key.py
 *.exe
 *.out
 *.app
+
+# db
+*.sqlite3
