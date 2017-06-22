@@ -28,7 +28,7 @@ def search(request):
         departure = request.GET.get('departure').strip().upper()
         arrival = request.GET.get('arrival').strip().upper()
         airline = request.GET.get('airline').strip().replace('/','').upper()
-        rating, results = utils.get_search_info(airline, flight_id, departure)
+        rating, results = utils.get_search_info(airline, flight_id, departure, arrival)
         if rating is None:
             messages.add_message(request, messages.ERROR, 'Invalid flight information')
             return HttpResponseRedirect('/')
