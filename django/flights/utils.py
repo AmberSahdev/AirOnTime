@@ -1,5 +1,7 @@
 from .fs_api import FlightInfo
 
+from flights.models import DisplayFlight
+
 #a collection of utility functions to be used in views.py
 def to_full_name(short):
     names = {'AA' : 'American Airlines',
@@ -29,19 +31,62 @@ def get_url(short):
            'B6' : 'https://www.jetblue.com',
            'WN' : 'https://www.southwest.com',
            'NK' : 'https://www.spirit.com',
-           'VX' : 'https://www.virginatlantic.com'
+           'VX' : 'https://www.virginatlantic.com',
+           'AC' : '',
+           'CO' : '',
+           'G4' : '',
+           'HA' : '',
+           'MQ' : '',
+           'OO' : ''
            }
     return urls[short]
 
-def get_search_info(airline, flight_id, departure):
+
+def get_search_info(airline, flight_id, departure, arrival):
     """
     Builds list of information that is to be displayed on search page
 
     Args:
     airline: string of airline code (i.e. 'AA')
     flight_id: string of flight id number (i.e. '219')
-    departure: string of airport code representing departing airport (ie. 'ORD')
+    departure: string of airport code representing departing airport (ex. 'ORD')
+    arrival: string of airport code representing arriving airport (ex. 'SFO')
 
+    Returns:
+    a tuple with 1st item the rating of the entered flight and second item a list of secondary flights: i.e. other suggested flights
+    """
+    #requested_flight_rating = primary flight rating = flight that user requested
+    #secondary_flights = flights that AOT suggests
+
+    try:
+        requested_flight_rating = DisplayFlight.objects.get(unique_carrier = airline, fl_num = flight_id, origin = departure, dest = arrival)
+    except:
+        return None, None
+
+    secondary_flights = DisplayFlight.objects.filter(origin = departure).filter(dest = arrival)
+    secondary_results = []
+
+    for flight in secondary_flights:
+        flight = list(flight)
+        full_name = to_full_name(flight.unique_carrier)
+        url = get_url(flight.unique_carrier)
+        flight.append(full_name)
+        flight.append(url)
+        secondary_results.append(flight)
+
+    return requested_flight_rating.OTR, sorted(secondary_results,key=lambda x: x[2], reverse=True)
+
+
+
+#old code
+'''
+def get_search_info(airline, flight_id, departure):
+    """
+    Builds list of information that is to be displayed on search page
+    Args:
+    airline: string of airline code (i.e. 'AA')
+    flight_id: string of flight id number (i.e. '219')
+    departure: string of airport code representing departing airport (ie. 'ORD')
     Returns:
     List of lists with airline code, flight number, rating, airline name, and url
     for each respective flight in search results
@@ -62,3 +107,4 @@ def get_search_info(airline, flight_id, departure):
         flight.append(url)
         results.append(flight)
     return rating[0], sorted(results,key=lambda x: x[2], reverse=True)
+'''

@@ -8,6 +8,8 @@ from .forms import SearchForm
 
 from . import utils
 
+from .models import DisplayFlight
+
 def index(request):
     if request.method == 'POST':
         airline = request.POST['airline'].upper()
@@ -18,6 +20,7 @@ def index(request):
         return HttpResponseRedirect('/search/?flight={0}&departure={1}&arrival={2}&airline={3}'.format(flight_id,departure,arrival,airline))
 
     return render(request, 'flights/index.html')
+
 
 def search(request):
     if 'flight' in request.GET:
