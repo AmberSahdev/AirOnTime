@@ -8,8 +8,6 @@ from .forms import SearchForm
 
 from . import utils
 
-from .models import DisplayFlight
-
 def index(request):
     if request.method == 'POST':
         airline = request.POST['airline'].upper()
