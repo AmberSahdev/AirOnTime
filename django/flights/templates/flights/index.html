@@ -37,6 +37,7 @@
         <option value="NK">Spirit Airlines </option>
         <option value="UA">United Airlines</option>
         <option value="VX">Virgin America</option>
+        <option value="FA">Fake test airline</option>
       </select>
 
       <div class ="btn-group">
@@ -44,7 +45,7 @@
           <span class="input-group-addon">
              <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
           </span>
-          <input id="Flight Number" type="text" class="form-control" name="flight" placeholder="Flight Number" style="width: 299px;" maxlength="4">
+          <input id="Flight Number" type="text" value ="{{ current_flightnumber}}" class="form-control" name="flight" placeholder="Flight Number" style="width: 299px;" maxlength="4">
         </div>
       </div>
 
@@ -55,7 +56,7 @@
           <span class="input-group-addon">
             <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
           </span>
-          <input id="departure" type="text" class="form-control" name="departure" placeholder="Departure Code" style="width: 200px;" maxlength="3">
+          <input id="departure" type="text" value="{{ departure_code }}" class="form-control" name="departure" placeholder="Departure Code" style="width: 200px;" maxlength="3">
         </div>
       </div>
 
@@ -64,7 +65,7 @@
           <span class="input-group-addon">
             <span class="glyphicon glyphicon-arrow-down"></span>
           </span>
-          <input id="arrival" type="text" class="form-control" name="arrival" placeholder="Arrival Code" style="width: 200px;" maxlength="3">
+          <input id="arrival" type="text" value="{{ arrival_code }}" class="form-control" name="arrival" placeholder="Arrival Code" style="width: 200px;" maxlength="3">
         </div>
       </div>
 

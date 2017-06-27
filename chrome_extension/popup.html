@@ -30,6 +30,9 @@
     </style>
 
     <script src="popup.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   </head>
 
   <body>
@@ -37,7 +40,7 @@
     <h3 style="color:#0066cc">AirOnTime </h3>
 
     <form class="form-inline" method="post">
-      <select class = "opacity" style="width: 287px;">
+      <select class = "opacity" style="width: 287px;" name = "airline">
         <option value="select">Select Airlines</option>
         <option value="AA">American Airlines</option>
         <option value="AC">Air Canada</option>
@@ -60,33 +63,43 @@
 
       <div class ="btn-group">
         <div class="input-group form-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-plane"></i></span>
-          <input id="Flight Number" type="text" class="form-control" name="Flight Number" placeholder="Flight Number" style="width: 250px;" maxlength="12">
+          <span class="input-group-addon">
+             <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
+          </span>
+          <input id="Flight Number" type="text" class="form-control" name="flight" placeholder="Flight Number" style="width: 247px;" maxlength="4">
         </div>
       </div>
       <div class ="btn-group form-inline" >
         <div class="input-group form-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-arrow-up"></i></span>
-          <input id="departure" type="text" class="form-control" name="departure" placeholder="Departure Code" style="width: 250px;" maxlength="3">
+          <span class="input-group-addon">
+            <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+          </span>
+          <input id="departure" type="text" class="form-control" name="departure" placeholder="Departure Code" style="width: 247px;" maxlength="3">
         </div>
       </div>
       <div class ="btn-group form-inline">
-        <div class="input-group form-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-arrow-down"></i></span>
-          <input id="arrival" type="text" class="form-control" name="arrival" placeholder="Arrival Code" style="width: 250px;" maxlength="3">
-        </div>
+      <div class="input-group form-group">
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-arrow-down"></span>
+        </span>
+        <input id="arrival" type="text" class="form-control" name="arrival" placeholder="Arrival Code" style="width: 247px;" maxlength="3">
       </div>
-      <div class="btn-group">
-        <a href="search.html">
-          <button type="submit" class="btn btn-primary btn-lg" data-toggle="dropdown">
-           Search for
-           <br>
-           <b> On Time Reliability </b>
-          </button>
-        </a>
-      </div>
+    </div>
+    <div class="btn-group">
+      <a href="https://www.google.com" target="_blank">
+        <button type="submit" class="btn btn-primary btn-lg" data-toggle="dropdown">
+         Search for
+         <br>
+         <b> On Time Reliability </b>
+        </button>
+      </a>
+    </div>
 
     </form>
+    <a href="https://www.google.co.in/search?site=&source=hp&q=hello+and+bye&oq=hello+and+bye&gs_l=hp.3...1025.4893.0.5061.18.14.0.0.0.0.763.1975.4-1j0j2.3.0....0...1.1.64.hp..15.3.1974.0..0j0i131k1.KW1seUxNvZM" target="_blank">
+      hello
+    </a>
+
 
 
     <img id="image-result" hidden>

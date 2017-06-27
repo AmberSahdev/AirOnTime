@@ -1,4 +1,6 @@
-{% extends "flights/header.html" %}
+{% extends "flights/searchheader.html" %}
+
+{% block content %}
 
 <div>
 <h1><a href = "/"><i>AirOnTime</i></a></h1>
@@ -10,55 +12,77 @@
     <p><i>From:</i> {{departure}} <i>To:</i> {{arrival}}</p>
     <hr class="m-y-2">
     <p class="lead">
-      <h3 font-size = "35">On time reliability: <b> {{rating}}% </b></h3>
+      <h3 font-size = "35">On Time Reliability: <b> {{rating}}% </b></h3>
     </p>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="{{ rating }}" aria-valuemin="0" aria-valuemax="100" style="width: {{rating}}%">
+        <span>{{ rating }}%</span>
+      </div>
+    </div>
   </div>
 
 <!--  ______________________________________________________________         -->
 <div class="well well-lg">
 <p class = "badge">Other Flights That Fly on The Same Route</p>
 
-  <div class="list-group">
+{% for flight_id, unique_carrier, fl_num, origin, dest, OTR, airline_name, airline_url in all_results %}
 
-  {% for airline, flight_id, rating, airline_name, url in results %}
-  
-  <div class="list-group-separator"></div>
-  <div class="list-group-item panel panel-default">
-  <!--<div class "panel-heading"> -->
-    <div class="row-picture">
-      <img class="circle" src="/static/img/{{airline}}.jpeg" alt="icon">
-    </div>
+  <ul class="media-list">
+    <li class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object img-circle" src="/static/flights/img/{{airline}}.jpeg" alt="icon" height="65" width="65">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{airline_name}} </h4>
+        <h4> {{unique_carrier}} {{ fl_num }}</h4>
+        <p class="list-group-item-text"><i>From: {{ origin }} To: {{ dest }}</i></p>
+        <p class="list-group-item-text">On time reliability: {{ OTR }}% </p>
+        <!-- <p> {{all_results}} </p> -->
+        <!-- <p> {{flight_id}} , {{ departure }} , {{arrival}} , {{airline}}, {{rating}}, {{all_results}}, {{airline_name}}, {{mellow}} </p> -->
+        <!-- TODO --> <!-- <p class="list-group-item-text">Departs at {{depart}}</p> -->
+        <!-- TODO --> <!-- <p class="list-group-item-text">Arrives at {{depart}}</p> -->
+        <a href= "{{url}}" target="_blank"><p class="list-group-item-text badge">Book it</p> </a>
+        <br><br>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="{{OTR}}" aria-valuemin="0" aria-valuemax="100" style="width: {{OTR}}%">
+            <span>{{ OTR }}%</span>
+          </div>
+        </div>
 
-    <div class="row-content">
-      <h4 class="list-group-item-heading">{{airline_name}} {{airline}} {{ flight_id }}</h4>
+      </div>
+    </li>
+  </ul>
+  <hr class="m-y-2">
 
-      <p class="list-group-item-text"><i>From: {{departure}} To: {{arrival}}</i></p>
-      <p class="list-group-item-text">On time reliability: {{rating}}% </p>
-      <!-- <p class="list-group-item-text">Departs at {{depart}}</p> -->
-      <a href= "{{url}}" target="_blank"><p class="list-group-item-text badge">Book it</p> </a>
-    </div>
+{% endfor %}
 
-    <div class = "panel-footer">
-    <div class="progress"  padding-bottom="10px">
-    <div class="progress-bar" role="progressbar" aria-valuenow="70"
-    aria-valuemin="3" aria-valuemax="100" style="width:{{rating}}%" padding-box = "10px">
-    60%
-    </div>
-    </div>
-    </div>
-  </div>
-  <!--</div> -->
-  {% endfor %}
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
 
-    <div class="btn-group btn-group-sm" role="group"><a href ="" > << Previous <a></div>
-    <div class="btn-group btn-group-sm" role="group"><a href ="" > Next >> <a></div>
-  </div>
 </div>
 
 <br>
 
+
 <footer>
-  <p class = "h6"> Created by <a href="https://github.com/a-sahdev" target="_blank"> Amber Sahdev </a> and
+  <p class = "h5"> Created by <a href="https://github.com/a-sahdev" target="_blank"> Amber Sahdev </a> and
   <a href="https://github.com/zacode11" target="_blank"> Zac Codiamat </a></p>
 </footer>
 

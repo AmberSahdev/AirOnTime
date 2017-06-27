@@ -15,8 +15,13 @@
     "default_icon": "img/nounproject.jpeg",
     "default_popup": "popup.html"
   },
+
   "permissions": [
-    "activeTab"
-    
+    "activeTab",
+		"tabs",
+		"http://*/*",
+		"https://*/*"
   ]
+
+
 }

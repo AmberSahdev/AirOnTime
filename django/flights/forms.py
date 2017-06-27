@@ -1,6 +1,8 @@
 from django import forms
 
-supported_airlines = ['AA', 'AC', 'AS', 'B6', 'CO', 'DL', 'F9', 'G4', 'HA', 'MQ', 'NK', 'OO', 'UA', 'VX', 'WN']
+from .models import DisplayFlight
+
+supported_airlines = ['AA', 'AC', 'AS', 'B6', 'CO', 'DL', 'F9', 'G4', 'HA', 'MQ', 'NK', 'OO', 'UA', 'VX', 'WN', 'FA']
 AIRLINES = (
     ('AA', 'American Airlines'),
     ('AC', 'Air Canada'),
@@ -16,11 +18,21 @@ AIRLINES = (
     ('OO', 'SkyWest Airlines'),
     ('UA','United Airlines'),
     ('VX', 'Virgin America'),
-    ('WN', 'SouthWest Airlines')
+    ('WN', 'SouthWest Airlines'),
+    ('FA', 'Fake Test Airlines')
 )
 
-class SearchForm(forms.Form):
-    departure_code = forms.CharField(label='Departure Code', max_length=3)
-    arrival_code = forms.CharField(label='Arrival Code', max_length=3)
+class SearchForm(forms.ModelForm):
 
-    airline = forms.ChoiceField(choices=AIRLINES, required=True)
+    class Meta:
+        model = DisplayFlight
+        fields = ['unique_carrier', 'fl_num', 'origin', 'dest']
+
+
+"""
+class SearchForm(forms.Form):
+        departure_code = forms.CharField(label='Departure Code', max_length=3)
+        arrival_code = forms.CharField(label='Arrival Code', max_length=3)
+        
+        airline = forms.ChoiceField(choices=AIRLINES, required=True)
+"""

@@ -16,7 +16,8 @@ def to_full_name(short):
            'G4' : 'Allegiant Air',
            'HA' : 'Hawaiian Airlines',
            'MQ' : 'Envoy Air',
-           'OO' : 'SkyWest Airlines'
+           'OO' : 'SkyWest Airlines',
+           'FA' : 'Fake Airline for test'
            }
     return names[short]
 
@@ -30,12 +31,13 @@ def get_url(short):
            'WN' : 'https://www.southwest.com',
            'NK' : 'https://www.spirit.com',
            'VX' : 'https://www.virginatlantic.com',
-           'AC' : '',
-           'CO' : '',
-           'G4' : '',
-           'HA' : '',
-           'MQ' : '',
-           'OO' : ''
+           'AC' : 'https://www.virginatlantic.com',
+           'CO' : 'https://www.virginatlantic.com',
+           'G4' : 'https://www.virginatlantic.com',
+           'HA' : 'https://www.virginatlantic.com',
+           'MQ' : 'https://www.virginatlantic.com',
+           'OO' : 'https://www.virginatlantic.com',
+           'FA' : 'https://www.virginatlantic.com'
            }
     return urls[short]
 
@@ -61,15 +63,15 @@ def get_search_info(airline, flight_id, departure, arrival):
     except:
         return None, None
 
-    secondary_flights = DisplayFlight.objects.filter(origin = departure).filter(dest = arrival)
+    secondary_flights = DisplayFlight.objects.filter(origin = departure).filter(dest = arrival).values()
     secondary_results = []
 
     for flight in secondary_flights:
-        flight = list(flight)
-        full_name = to_full_name(flight.unique_carrier)
-        url = get_url(flight.unique_carrier)
-        flight.append(full_name)
-        flight.append(url)
-        secondary_results.append(flight)
+        flight_to_send = list(flight.values()) #.values() because flight is a dictionary
+        full_name = to_full_name(flight['unique_carrier'])
+        url = get_url(flight['unique_carrier'])
+        flight_to_send.append(full_name)
+        flight_to_send.append(url)
+        secondary_results.append(flight_to_send)
 
-    return requested_flight_rating.OTR, sorted(secondary_results,key=lambda x: x[2], reverse=True)
+    return requested_flight_rating.OTR, sorted(secondary_results, key=lambda x: x[5], reverse=True)
