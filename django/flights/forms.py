@@ -33,6 +33,6 @@ class SearchForm(forms.ModelForm):
 class SearchForm(forms.Form):
         departure_code = forms.CharField(label='Departure Code', max_length=3)
         arrival_code = forms.CharField(label='Arrival Code', max_length=3)
-        
+
         airline = forms.ChoiceField(choices=AIRLINES, required=True)
 """

@@ -25,7 +25,7 @@
 <div class="well well-lg">
 <p class = "badge">Other Flights That Fly on The Same Route</p>
 
-{% for flight_id, unique_carrier, fl_num, origin, dest, OTR, airline_name, airline_url in all_results %}
+{% for flight_id, unique_carrier, fl_num, origin, dest, OTR, scheduled_arrival_time, scheduled_departure_time, airline_name, airline_url  in all_results %}
 
   <ul class="media-list">
     <li class="media">

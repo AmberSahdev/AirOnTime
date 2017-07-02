@@ -23,3 +23,5 @@ class DisplayFlight(models.Model):
     origin = models.CharField(max_length = 3)
     dest = models.CharField(max_length = 3)
     OTR = models.PositiveSmallIntegerField()
+    scheduled_departure_time = models.PositiveSmallIntegerField() #24 hour time
+    scheduled_arrival_time = models.PositiveSmallIntegerField() #24 hour time
