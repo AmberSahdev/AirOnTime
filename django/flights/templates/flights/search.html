@@ -3,14 +3,14 @@
 {% block content %}
 
 <div>
-<h1><a href = "/"><i>AirOnTime</i></a></h1>
+<h1 style="color:#007acc"><a href = "/">AirOnTime</a></h1>
 </div>
 
   <div class="jumbotron"/>
     <h2 class="h2">{{airline}}</h2>
     <p class="lead"><i>Flight Number: {{flight_id}}</i></p>
-    <p><i>From:</i> {{departure}} <i>To:</i> {{arrival}}</p>
-    <hr class="m-y-2">
+    <p><i>From: {{departure}} To: {{arrival}}</p> </i>
+
     <p class="lead">
       <h3 font-size = "35">On Time Reliability: <b> {{rating}}% </b></h3>
     </p>
@@ -24,6 +24,7 @@
 <!--  ______________________________________________________________         -->
 <div class="well well-lg">
 <p class = "badge">Other Flights That Fly on The Same Route</p>
+<hr class="m-y-2">
 
 {% for flight_id, unique_carrier, fl_num, origin, dest, OTR, scheduled_arrival_time, scheduled_departure_time, airline_name, airline_url  in all_results %}
 

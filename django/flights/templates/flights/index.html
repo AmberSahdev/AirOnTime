@@ -10,13 +10,14 @@
   {% endfor %}
   {% endif %}
 
-
     <div>
-      <h1 align="left" ><a href = "/"> AirOnTime </a></h1>
+      <h1 align="left"><a href = "/"> AirOnTime </a></h1>
     </div>
 
+
     <br><br>
-    <h3 style="color:#0066cc">Enter your flight information</h3>
+    <h3 ><mark style="color:#007acc; opacity: 0.70;">Enter your flight information</mark></h3>
+
 
 
     <form class="form-inline" method="post"> {% csrf_token %}
@@ -78,7 +79,10 @@
            <b style="font-size : 17.5px;"> On Time Reliability </b>
           </button>
       </div>
-
+      <!--
+      <br><br>
+      <h3><mark style="color:#007acc; opacity: 0.70;">Never spend hours waiting for your flight anymore</mark></h3>
+      -->
     </form>
 
   <br>
