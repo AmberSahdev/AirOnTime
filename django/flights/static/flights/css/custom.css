@@ -1,12 +1,13 @@
 html {
-  font-family: arial;
+  font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+/*
 body {
 
   margin-left: 16px;
-
+  background-size:100%,100%;
   background-repeat: no-repeat;
   text-align: center;
   position: relative;
@@ -17,6 +18,24 @@ body {
   background-image: url(../img/1.jpeg);
   background-size: contain;
 
+}
+*/
+body {
+
+  margin-left: 16px;
+
+  text-align: center;
+
+
+  left: 0;
+  right: 0;
+
+  background: url(../img/1.jpeg) no-repeat;
+  background-size:100%,100%;
+
+
+  background-size: cover;
+  position: relative;
 }
 
 #page {
@@ -80,9 +99,9 @@ input[type="search"]::-webkit-search-decoration {
 
 .btn {
     display: inline-block;
-    padding: 8px 14px;
+    padding: 6px 12px;
     margin-bottom: 0;
-    font-size: 25px;
+    font-size: 14px;
     font-weight: normal;
     line-height: 1.42857143;
     text-align: center;
@@ -115,7 +134,7 @@ text-align: center;
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
-  font-size: 20px;
+  font-size: 14px;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -157,44 +176,8 @@ h1,
   height:35px;
 }
 
-
-
-#container {
-   min-height:100%;
-   position:relative;
-   padding-left: 10px;
-
-}
-#header {
-   background:#ff0;
-   padding:10px;
-}
-#body {
-   padding:10px;
-   padding-bottom:60px;   /* Height of the footer */
-}
-#footer {
-   position:absolute;
-   bottom:0;
-   padding: 12px 12px;
-   width:90%;
-   height:60px;   /* Height of the footer */
-   background:#6cf;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-  font-size: 40px;
-}
-
-input[type="submit"].btn-block,
-input[type="reset"].btn-block,
-input[type="button"].btn-block {
-  width: 100%;
-  font-size: 40px;
-
+#footer{
+ position:fixed;
+ bottom:0;
+ left:0;
 }
