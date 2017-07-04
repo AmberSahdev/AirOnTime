@@ -21,18 +21,13 @@ body {
 }
 */
 body {
-
   /*margin-left: 16px;*/
-
   text-align: center;
-
-
   left: 0;
   right: 0;
 
   background: url(../img/1.jpeg) no-repeat;
   background-size:100%,100%;
-
 
   background-size: cover;
   position: relative;

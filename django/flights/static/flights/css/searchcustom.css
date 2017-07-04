@@ -124,3 +124,10 @@ h2,
   font-weight: bold;
   padding-top: 25px;
 }
+
+.label {
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 9px;
+  color: BLACK;
+}

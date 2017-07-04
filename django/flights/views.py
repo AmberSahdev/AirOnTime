@@ -38,3 +38,11 @@ def search(request):
         'all_results': all_results
     }
     return render(request, 'flights/search.html', context)
+
+
+def about(request):
+    return render(request, 'flights/about.html')
+
+
+def contact(request):
+    return render(request, 'flights/contact.html')

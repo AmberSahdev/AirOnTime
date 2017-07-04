@@ -10,8 +10,8 @@
     </div>
 
     <ul class="nav navbar-nav navbar-right" style="font-size:15px;">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
     </ul>
   </div><!-- /.container-fluid -->
 </nav>
@@ -33,7 +33,7 @@
 
 <!--  ______________________________________________________________         -->
 <div class="well well-lg">
-<p class = "badge">Other Flights That Fly on The Same Route</p>
+<span class="label label-success">Other Flights That Fly on The Same Route</span>
 <hr class="m-y-2">
 
 {% for flight_id, unique_carrier, fl_num, origin, dest, OTR, scheduled_arrival_time, scheduled_departure_time, airline_name, airline_url  in all_results %}
@@ -42,7 +42,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-          <img class="media-object img-circle" src="/static/flights/img/{{airline}}.jpeg" alt="icon" height="65" width="65">
+          <img class="media-object img-circle" src="/static/flights/img/{{airline}}.jpeg" alt=" {{airline_name}} icon" height="65" width="65">
         </a>
       </div>
       <div class="media-body">
@@ -54,7 +54,7 @@
         <!-- <p> {{flight_id}} , {{ departure }} , {{arrival}} , {{airline}}, {{rating}}, {{all_results}}, {{airline_name}}, {{mellow}} </p> -->
         <!-- TODO --> <!-- <p class="list-group-item-text">Departs at {{depart}}</p> -->
         <!-- TODO --> <!-- <p class="list-group-item-text">Arrives at {{depart}}</p> -->
-        <a href= "{{url}}" target="_blank"><p class="list-group-item-text badge">Book it</p> </a>
+        <a href= "{{url}}" target="_blank"><p class="list-group-item-text badge">Book it</p></a>
         <br><br>
         <div class="progress">
           <div class="progress-bar" role="progressbar" aria-valuenow="{{OTR}}" aria-valuemin="0" aria-valuemax="100" style="width: {{OTR}}%">
