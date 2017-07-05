@@ -184,15 +184,15 @@ h1,
    background: transparent;
    border-color: transparent;
    padding-top: 5px;
-   padding: 0px 15px;
+   padding: 7px 7px;
 }
 
 .navbar-brand {
   float: left;
   height: 50px;
-  padding: 25px 25px;
+  padding: 15px 25px;
   font-size: 39px;
   line-height: 20px;
   font-weight: bold;
-  padding-top: 25px;
+  padding-top: 15px;
 }
