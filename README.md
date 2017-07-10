@@ -37,7 +37,10 @@ At the heart of this web application is the simplistic approach to getting infor
 
 2. Source Code: [GitHub Repository](https://github.com/a-sahdev/AirOnTime)
 
-3. Devpost: [Devpost](https://devpost.com/software/airontime){:target="_blank"}
+3. Devpost: <a href="https://devpost.com/software/airontime" target="_blank">Devpost</a>
+
+
+
 
 
 
@@ -54,7 +57,7 @@ At the heart of this web application is the simplistic approach to getting infor
 
 
 ## Contributor Guide
-[CONTRIBUTING.md](https://github.com/a-sahdev/AirOnTime/blob/master/CONTRIBUTING.md){:target="_blank"}
+[CONTRIBUTING.md](https://github.com/a-sahdev/AirOnTime/blob/master/CONTRIBUTING.md)
 
 
 ## License 
