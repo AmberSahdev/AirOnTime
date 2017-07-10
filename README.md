@@ -1,7 +1,7 @@
 # AirOnTime
 ## We make sure that you don't have to wait for your flights and that you are always on time.
 
-Website: http://www.aironti.me/
+http://www.aironti.me/
 
 ____
 
@@ -13,9 +13,9 @@ ____
 
 ____
 ### <a href="www.aironti.me" target="_blank"> AirOnTime </a> is a website that enables you to enter the flight number of the flight you are looking forward to book and quickly shows you how often that particular flight is delayed and what are the other reliable options for the same route. 
-____
+
 ## Knowing the On Time Reliability of your flight can help you make better decisions and manage your time well.
-____
+
 ##### Don't waste your time waiting for your flight. Don't give your money to unreliable airlines. 
 
 You just enter your flight number, departure and arrival airport codes and hit search...
@@ -55,7 +55,10 @@ At the heart of this web application is the simplistic approach to getting infor
 
 
 ## Contact Us:
+We'd love to hear your feedback
+
 - Email : [airontime@protonmail.com](mailto:airontime@protonmail.com)
+
 
 
 ## Contributor Guide
