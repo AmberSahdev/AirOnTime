@@ -4,10 +4,16 @@
 http://www.aironti.me/
 
 #### Would you like a way to avoid waiting at airports for delayed flights? 
-#### Do you wish that there just existed a way to easily check how often a particular flight is delayed? 
+#### Do you wish that there just existed a way to easily check how often a particular flight is delayed?
+
+### Getting to your destination on time is something that you might value and that's why we built AirOnTime.
 
 
-#### [AirOnTime](http://www.aironti.me/) is a website that allows you to enter the flight number of the flight you are trying to book and quickly shows you how often the particular flight is delayed and what are the other reliable options for the same route.
+#### [AirOnTime](http://www.aironti.me/) is a website that enables you to enter the flight number of the flight you are looking forward to book and quickly shows you how often that particular flight is delayed and what are the other reliable options for the same route. 
+
+### Knowing the On Time Reliability of your flight can help you make better decisions and manage your time well.
+
+##### Don't waste your time waiting for your flight, don't give your money to unreliable airlines. 
 
 
 You just enter your flight number, departure and arrival airport codes and hit search...
@@ -21,19 +27,13 @@ You just enter your flight number, departure and arrival airport codes and hit s
 
 ### And now you have the ability to book a flight for which you **won't have to wait 3 hours** at the airport ###
 
-At the heart of this web application is the simplistic approach to getting information so that **you**, the user, can make an informed choice without spending too much time on it. 
-
-
-The frontend is Bootstrap and Material Design for Bootstrap.
-
-The backend is built with Python 2.7 and Django 1.10.5 . 
-To scrape data from different sources, we use BeautifulSoup and Mechanize. 
+At the heart of this web application is the simplistic approach to getting information so that **you** can make an informed choice and not feel flustered from waiting for your late flight.
 
 
 
 ## General Information:
 
-1. Website: [AirOnTime](http://www.aironti.me/)
+1. Website: [ AirOnTime ](http://www.aironti.me/)
 
 2. Source Code: [GitHub Repo](https://github.com/a-sahdev/AirOnTime)
 
@@ -41,19 +41,23 @@ To scrape data from different sources, we use BeautifulSoup and Mechanize.
 
 
 
-## Possible Features for the Future: 
+## Upcoming Features: 
 - [ ] A Chrome Extension 
 
-- [ ] Ability to view alternative options for just a specific airlines
+- [ ] Faster and Extremely Reliable results
 
 - [ ] Also, more items in this list!
+
+
+## Contact Us:
+- Email : [airontime@protonmail.com](airontime@protonmail.com)
 
 
 ## Contributor Guide
 [CONTRIBUTING.md](https://github.com/a-sahdev/AirOnTime/blob/master/CONTRIBUTING.md)
 
-## License 
 
+## License 
 
 ##### [LICENSE](LICENSE.md) 
 
