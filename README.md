@@ -6,14 +6,14 @@ http://www.aironti.me/
 #### Would you like a way to avoid waiting at airports for delayed flights? 
 #### Do you wish that there just existed a way to easily check how often a particular flight is delayed?
 
-### Getting to your destination on time is something that you might value and that's why we built AirOnTime.
+### Getting to one's destination on time is something that everyone values and that's why we built AirOnTime.
 
 
 #### [AirOnTime](http://www.aironti.me/) is a website that enables you to enter the flight number of the flight you are looking forward to book and quickly shows you how often that particular flight is delayed and what are the other reliable options for the same route. 
 
 ### Knowing the On Time Reliability of your flight can help you make better decisions and manage your time well.
 
-##### Don't waste your time waiting for your flight, don't give your money to unreliable airlines. 
+##### Don't waste your time waiting for your flight. Don't give your money to unreliable airlines. 
 
 
 You just enter your flight number, departure and arrival airport codes and hit search...
@@ -35,9 +35,9 @@ At the heart of this web application is the simplistic approach to getting infor
 
 1. Website: [ AirOnTime ](http://www.aironti.me/)
 
-2. Source Code: [GitHub Repo](https://github.com/a-sahdev/AirOnTime)
+2. Source Code: [GitHub Repository](https://github.com/a-sahdev/AirOnTime)
 
-3. Devpost: [Devpost](https://devpost.com/software/airontime)
+3. Devpost: [Devpost](https://devpost.com/software/airontime){:target="_blank"}
 
 
 
@@ -54,7 +54,7 @@ At the heart of this web application is the simplistic approach to getting infor
 
 
 ## Contributor Guide
-[CONTRIBUTING.md](https://github.com/a-sahdev/AirOnTime/blob/master/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/a-sahdev/AirOnTime/blob/master/CONTRIBUTING.md){:target="_blank"}
 
 
 ## License 
