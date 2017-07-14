@@ -4,7 +4,7 @@ rows = []
 
 supported_airlines = ['AA', 'UA', 'AS', 'DL', 'F9', 'B6', 'WN', 'NK', 'VX', 'AC', 'CO', 'G4', 'HA', 'MQ', 'OO']
 
-with open('combine.csv') as f:
+with open('january.csv') as f:
     reader = csv.reader(f)
     #skip header
     next(reader, None)
@@ -18,7 +18,7 @@ with open('combine.csv') as f:
             row[13] = int(float(row[13]))
             rows.append(row)
 
-writer = csv.writer(open("sanitized_flight_data.csv", "wb"))
+writer = csv.writer(open("january_sanitized_flight_data.csv", "wb"))
 print len(rows)
 for row in rows:
     writer.writerow(row)
