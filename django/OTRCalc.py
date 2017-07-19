@@ -1,3 +1,4 @@
+#this script deletes the information from the original db and replaces it with a new table with OTR calculations
 import sys
 import os
 import django
