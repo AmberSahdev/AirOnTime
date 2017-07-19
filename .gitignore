@@ -39,3 +39,8 @@ secret_key.py
 
 # db
 *.sqlite3
+
+venv
+*.pyc
+staticfiles
+.env
