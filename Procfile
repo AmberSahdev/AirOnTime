@@ -1,1 +1,1 @@
-web: gunicorn airontime.wsgi --log-file -
+web: gunicorn django/airontime.wsgi --log-file -
