@@ -10,15 +10,11 @@ django.setup()
 
 from flights.models import DisplayFlight, Flight
 
-
-
 # Helper Functions
 def roundto5(x, base=5):
     return int(base * round(float(x)/base))
 
-
 # ////////////////////////////////////////////////
-
 objs = []
 
 iden = 1
@@ -29,18 +25,6 @@ while(1):
         iden = iden+1
         print('success at try')
 
-        '''
-        print('1')
-        cur_value = Flight.objects.all().values()
-        print('1.5')
-
-        print(cur_value)
-        current_value = dict()
-        print('hi')
-        current_value=cur_value.pop()
-        #TODO: IT IS FAILING HERE RIGHT NOW
-        print('2')
-        '''
     except:
         object_count = Flight.objects.count()
         if object_count == 0:
@@ -58,7 +42,6 @@ while(1):
 
     flight_variable = Flight.objects.filter(fl_num = current_value.fl_num).filter(carrier = current_value.carrier).filter(origin = current_value.origin).filter(dest = current_value.dest)
     flights = flight_variable.values()
-    #flights = Flight.objects.filter(fl_num = current_value.fl_num).filter(carrier = current_value.carrier).filter(origin = current_value.origin).filter(dest = current_value.dest).values()
 
     OTR = 90
     for value in flights:
@@ -77,15 +60,12 @@ while(1):
             deduct = 5
             print('flight was CANCELLED')
 
-
         #if flight is on time
         elif value['arr_delay_new'] ==0:
             deduct = -0.1
             print('flight on time')
 
-
         OTR = int(OTR - deduct)
-
 
 
     #normalizing the value of OTR
@@ -116,13 +96,8 @@ while(1):
     print('that flight is deleted')
 
 
-
-
 print('starting to create objects in bulk')
 DisplayFlight.objects.bulk_create(objs)
 print('objects bulk created')
-
-
-
 
 # ////////////////

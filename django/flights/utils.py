@@ -17,7 +17,7 @@ def to_full_name(short):
            'HA' : 'Hawaiian Airlines',
            'MQ' : 'Envoy Air',
            'OO' : 'SkyWest Airlines',
-           'FA' : 'Fake Airline for test'
+           #'FA' : 'Fake Airline for test'
            }
     return names[short]
 
@@ -31,13 +31,13 @@ def get_url(short):
            'WN' : 'https://www.southwest.com',
            'NK' : 'https://www.spirit.com',
            'VX' : 'https://www.virginatlantic.com',
-           'AC' : 'https://www.virginatlantic.com',
-           'CO' : 'https://www.virginatlantic.com',
-           'G4' : 'https://www.virginatlantic.com',
-           'HA' : 'https://www.virginatlantic.com',
-           'MQ' : 'https://www.virginatlantic.com',
-           'OO' : 'https://www.virginatlantic.com',
-           'FA' : 'https://www.virginatlantic.com'
+           'AC' : 'https://www.aircanada.com/us/en/aco/home.html',
+           'CO' : 'https://www.united.com',
+           'G4' : 'https://www.allegiantair.com/reservations-ticketing',
+           'HA' : 'https://www.hawaiianairlines.com/book/flights',
+           'MQ' : 'https://www.aa.com',
+           'OO' : 'http://www.skywest.com/fly-skywest-airlines/checkin/',
+           #'FA' : 'https://www.virginatlantic.com'
            }
     return urls[short]
 

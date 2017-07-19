@@ -12,9 +12,9 @@
     </div>
 
     <ul class="nav navbar-nav navbar-right" style="font-size:15px;">
-      <li><a href="/"><b>Home</b></a></li>
-      <li><a href="/about/"><b>About</b></a></li>
-      <li><a href="/contact/"><b>Contact</b></a></li>
+      <li><a href="/"><b style="color:BLACK;">Home</b></a></li>
+      <li><a href="/about/"><b style="color:BLACK;">About</b></a></li>
+      <li><a href="/contact/"><b style="color:BLACK;">Contact</b></a></li>
     </ul>
   </div><!-- /.container-fluid -->
 </nav>
@@ -45,7 +45,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-          <img class="media-object img-circle" src="/static/flights/img/{{airline}}.jpeg" alt=" {{airline_name}} icon" height="65" width="65">
+          <img class="media-object img-circle" src="/static/flights/img/{{unique_carrier}}logo.jpeg" alt=" {{airline_name}} icon" height="65" width="65">
         </a>
       </div>
       <div class="media-body">
@@ -57,7 +57,7 @@
         <!-- <p> {{flight_id}} , {{ departure }} , {{arrival}} , {{airline}}, {{rating}}, {{all_results}}, {{airline_name}}, {{mellow}} </p> -->
         <!-- TODO --> <!-- <p class="list-group-item-text">Departs at {{depart}}</p> -->
         <!-- TODO --> <!-- <p class="list-group-item-text">Arrives at {{depart}}</p> -->
-        <a href= "{{url}}" target="_blank"><p class="list-group-item-text badge">Book it</p></a>
+        <a href= "{{airline_url}}" target="_blank"><p class="list-group-item-text badge">Book it</p></a>
         <br><br>
         <div class="progress">
           <div class="progress-bar" role="progressbar" aria-valuenow="{{OTR}}" aria-valuemin="0" aria-valuemax="100" style="width: {{OTR}}%">
