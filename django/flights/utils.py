@@ -64,14 +64,17 @@ def get_search_info(airline, flight_id, departure, arrival):
         return None, None
 
     secondary_flights = DisplayFlight.objects.filter(origin = departure).filter(dest = arrival).values()
+    print(secondary_flights)
     secondary_results = []
 
     for flight in secondary_flights:
-        flight_to_send = list(flight.values()) #.values() because flight is a dictionary
+        # flight_to_send = list(flight.values()) #.values() because flight is a dictionary
+        #need deterministic order
+        flight_to_send = [flight['OTR'], flight['scheduled_departure_time'], flight['dest'], flight['fl_num'], flight['origin'], flight['unique_carrier'], flight['scheduled_arrival_time']]
         full_name = to_full_name(flight['unique_carrier'])
         url = get_url(flight['unique_carrier'])
         flight_to_send.append(full_name)
         flight_to_send.append(url)
         secondary_results.append(flight_to_send)
 
-    return requested_flight_rating.OTR, sorted(secondary_results, key=lambda x: x[5], reverse=True)
+    return requested_flight_rating.OTR, sorted(secondary_results, key=lambda x: x[0], reverse=True)
