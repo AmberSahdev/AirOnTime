@@ -71,9 +71,11 @@
   <hr class="m-y-2">
 
 {% endfor %}
+<h4><strong> Page {{ all_results.number }} of {{ all_results.paginator.num_pages }} </strong></h4>
+
 
 <nav aria-label="Page navigation">
-  <ul class="pagination">
+  <ul class="pagination pagination-lg">
     {% if all_results.has_previous %}
     <li>
           <a href="/search/?flight={{flight_id}}&departure={{departure}}&arrival={{arrival}}&airline={{airline}}&page={{ all_results.previous_page_number }}" aria-label="Previous">
@@ -81,7 +83,6 @@
           </a>
     </li>
     {% endif %}
-    <li>Page {{ all_results.number }} of {{ all_results.paginator.num_pages }}</li>
     <!-- <li><a href="#">1</a></li>
     <li><a href="#">2</a></li>
     <li><a href="#">3</a></li> -->
@@ -94,6 +95,7 @@
     {% endif %}
   </ul>
 </nav>
+
 
 </div>
 
