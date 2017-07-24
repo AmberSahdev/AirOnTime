@@ -20,6 +20,7 @@
 </nav>
 
   <div class="jumbotron">
+    <div class = "textinjumbotron">
     <h2 class="h2">{{airline_full}}</h2>
     <p class="lead"><i>Flight Number: {{flight_id}}</i></p>
     <p><i>From: {{departure}} To: {{arrival}}</p> </i>
@@ -32,72 +33,75 @@
         <span>{{ rating }}%</span>
       </div>
     </div>
+    </div>
   </div>
 
 <!--  ______________________________________________________________         -->
 <div class="well well-lg">
-<h3 style="color:#007acc;"><u>Other Flights That Fly on The Same Route</u></h3>
-<hr class="m-y-2">
-
-{% for OTR, scheduled_departure_time, dest, fl_num, origin, unique_carrier, scheduled_arrival_time, airline_name, airline_url in all_results %}
-
-  <ul class="media-list">
-    <li class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object img-circle" src="/static/flights/img/{{unique_carrier}}logo.jpeg" alt=" {{airline_name}} icon" height="65" width="65">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">{{airline_name}} </h4>
-        <h4> {{unique_carrier}} {{ fl_num }}</h4>
-        <p class="list-group-item-text"><i>From: {{ origin }} To: {{ dest }}</i></p>
-        <p class="list-group-item-text">On time reliability: <b> {{ OTR }}% </b> </p>
-        <!-- <p> {{all_results}} </p> -->
-        <!-- <p> {{flight_id}} , {{ departure }} , {{arrival}} , {{airline}}, {{rating}}, {{all_results}}, {{airline_name}}, {{mellow}} </p> -->
-        <!-- TODO --> <!-- <p class="list-group-item-text">Departs at {{depart}}</p> -->
-        <!-- TODO --> <!-- <p class="list-group-item-text">Arrives at {{depart}}</p> -->
-        <a href= "{{airline_url}}" target="_blank"><p class="list-group-item-text badge">Book it</p></a>
-        <br><br>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="{{OTR}}" aria-valuemin="0" aria-valuemax="100" style="width: {{OTR}}%">
-            <span>{{ OTR }}%</span>
-          </div>
-        </div>
-
-      </div>
-    </li>
-  </ul>
+  <div class = "textinjumbotron">
+  <h3 style="color:#007acc;"><u>Other Flights That Fly on The Same Route</u></h3>
   <hr class="m-y-2">
 
-{% endfor %}
+  {% for OTR, scheduled_departure_time, dest, fl_num, origin, unique_carrier, scheduled_arrival_time, airline_name, airline_url in all_results %}
 
-<center>
-<h4><strong> Page {{ all_results.number }} of {{ all_results.paginator.num_pages }} </strong></h4>
-
-<nav aria-label="Page navigation">
-  <ul class="pagination pagination-lg">
-    {% if all_results.has_previous %}
-    <li>
-          <a href="/search/?flight={{flight_id}}&departure={{departure}}&arrival={{arrival}}&airline={{airline}}&page={{ all_results.previous_page_number }}" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
+    <ul class="media-list">
+      <li class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object img-circle" src="/static/flights/img/{{unique_carrier}}logo.jpeg" alt=" {{airline_name}} icon" height="65" width="65">
           </a>
-    </li>
-    {% endif %}
-    <!-- <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li> -->
-    {% if all_results.has_next %}
-    <li>
-      <a href="/search/?flight={{flight_id}}&departure={{departure}}&arrival={{arrival}}&airline={{airline}}&page={{ all_results.next_page_number }}" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-    {% endif %}
-  </ul>
-</nav>
-</center>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{airline_name}} </h4>
+          <h4> {{unique_carrier}} {{ fl_num }} </h4>
+          <p class="list-group-item-text"><i>From: {{ origin }} To: {{ dest }}</i> </p>
+          <p class="list-group-item-text">On time reliability: <b> {{ OTR }}% </b> </p>
+          <a href= "{{airline_url}}" target="_blank"><span class="badge">Book this flight</span></a>
 
+          <!-- TODO --> <!-- <p class="list-group-item-text">Departs at {{depart}}</p> -->
+          <!-- TODO --> <!-- <p class="list-group-item-text">Arrives at {{depart}}</p> -->
+
+          <!-- <a href= "{{airline_url}}" target="_blank"><span class="badge">Book this flight</span></a> -->
+
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{OTR}}" aria-valuemin="0" aria-valuemax="100" style="width: {{OTR}}%">
+              <span>{{ OTR }}%</span>
+            </div>
+          </div>
+
+        </div>
+      </li>
+    </ul>
+    <hr class="m-y-2">
+
+  {% endfor %}
+
+  <center>
+  <h4><strong> Page {{ all_results.number }} of {{ all_results.paginator.num_pages }} </strong></h4>
+
+  <nav aria-label="Page navigation">
+    <ul class="pagination pagination-lg">
+      {% if all_results.has_previous %}
+      <li>
+            <a href="/search/?flight={{flight_id}}&departure={{departure}}&arrival={{arrival}}&airline={{airline}}&page={{ all_results.previous_page_number }}" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+      </li>
+      {% endif %}
+      <!-- <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li> -->
+      {% if all_results.has_next %}
+      <li>
+        <a href="/search/?flight={{flight_id}}&departure={{departure}}&arrival={{arrival}}&airline={{airline}}&page={{ all_results.next_page_number }}" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+  </center>
+  </div>
 </div>
 
 

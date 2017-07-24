@@ -38,7 +38,7 @@
     <h3 style="color:#007acc;">Enter your flight information</h3>
 
 
-
+<div class="container-fluid">
     <form class="form-inline" method="post"> {% csrf_token %}
       <select class = "opacity" name="airline">
         <option value="select">Select Airlines</option>
@@ -103,9 +103,6 @@
 
   <br>
 
-
-  <div id="container-fluid">
-
-  </div>
+</div>
 
 {% endblock %}
