@@ -30,8 +30,13 @@
 
 
     <br><br><br>
+    <!--
     <h3 ><mark style="color:#007acc; opacity: 0.70;">Want to know how reliable your flight is?</mark></h3>
     <h3 ><mark style="color:#007acc; opacity: 0.70;">Enter your flight information</mark></h3>
+    -->
+    <h3 style="color:#007acc;">Want to know how reliable your flight is?</h3>
+    <h3 style="color:#007acc;">Enter your flight information</h3>
+
 
 
     <form class="form-inline" method="post"> {% csrf_token %}
@@ -71,7 +76,7 @@
           <span class="input-group-addon">
             <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
           </span>
-          <input id="departure" type="text" value="{{ departure_code }}" class="form-control" name="departure" placeholder="Departure Code" style="width: 200px;" maxlength="3">
+          <input id="departure" type="text" value="{{ departure_code }}" class="form-control" name="departure" placeholder="Departure Airport" style="width: 200px;" maxlength="3">
         </div>
       </div>
 
@@ -80,7 +85,7 @@
           <span class="input-group-addon">
             <span class="glyphicon glyphicon-arrow-down"></span>
           </span>
-          <input id="arrival" type="text" value="{{ arrival_code }}" class="form-control" name="arrival" placeholder="Arrival Code" style="width: 200px;" maxlength="3">
+          <input id="arrival" type="text" value="{{ arrival_code }}" class="form-control" name="arrival" placeholder="Destination Airport" style="width: 200px;" maxlength="3">
         </div>
       </div>
 
@@ -90,36 +95,17 @@
           <button type="submit" class="btn btn-primary btn-lg">
            Search for
            <br>
-           <b style="font-size : 17.5px;"> On Time Reliability </b>
+           <b style="font-size : 19.5px;">On Time Reliability</b>
+           <br>
           </button>
       </div>
-      <!--
-      <br><br>
-      <h3><mark style="color:#007acc; opacity: 0.70;">Never spend hours waiting for your flight anymore</mark></h3>
-      -->
     </form>
 
   <br>
 
 
   <div id="container-fluid">
-     <!--<div id="header"></div>
-     <div id="body"> </div> -->
-    <div id="footer">
-      <p class="h5" style="margin-left:10px; color:GREY;">A product by <a href="https://github.com/a-sahdev" target="_blank">Amber Sahdev</a> and
-      <a href="https://github.com/zacode11" target="_blank"> Zac Codiamat</a></p>
 
-    </div>
   </div>
-
-<!--
-<footer>
-  <div class="container-fluid" style='margin-left:15px'>
-    <p>Created by <a href="https://github.com/a-sahdev" target="_blank">Amber Sahdev</a> and
-    <a href="https://github.com/zacode11" target="_blank"> Zac Codiamat</a></p>
-  </div>
-</footer>
--->
-
 
 {% endblock %}
