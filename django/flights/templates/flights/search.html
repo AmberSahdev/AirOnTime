@@ -6,37 +6,35 @@
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="/" style="color:#007acc;">AirOnTime</a>
+      <a class="navbar-brand" href="/" style="color:#006eba;">AirOnTime</a>
     </div>
-
     <ul class="nav navbar-nav navbar-right" style="font-size:15px;">
-      <li><a href="/"><b style="color:BLACK;">Home</b></a></li>
-      <li><a href="/about/"><b style="color:BLACK;">About</b></a></li>
-      <li><a href="/contact/"><b style="color:BLACK;">Contact</b></a></li>
+      <li><a href="/"><b style="color:#005996;">Home</b></a></li>
+      <li><a href="/about/"><b style="color:#005996;">About</b></a></li>
+      <li><a href="/contact/"><b style="color:#005996;">Contact</b></a></li>
     </ul>
-  </div><!-- /.container-fluid -->
+  </div>
 </nav>
 
-  <div class="jumbotron">
-    <div class = "textinjumbotron">
-    <h2 class="h2">{{airline_full}}</h2>
-    <p class="lead"><i>Flight Number: {{flight_id}}</i></p>
-    <p><i>From: {{departure}} To: {{arrival}}</p> </i>
+<div class="jumbotron">
+  <div class = "textinjumbotron">
+  <h2 class="h2">{{airline_full}}</h2>
+  <p class="lead"><i>Flight Number: {{flight_id}}</i></p>
+  <p><i>From: {{departure}} To: {{arrival}}</i></p>
 
-    <p class="lead">
-      <h3 font-size = "35">On Time Reliability: <b> {{rating}}% </b></h3>
-    </p>
-    <div class="progress">
-      <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="{{ rating }}" aria-valuemin="0" aria-valuemax="100" style="width: {{rating}}%">
-        <span>{{ rating }}%</span>
-      </div>
-    </div>
+  <p class="lead">
+    <h3 font-size = "35">On Time Reliability: <b> {{rating}}% </b></h3>
+  </p>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="{{ rating }}" aria-valuemin="0" aria-valuemax="100" style="width: {{rating}}%">
+      <span>{{ rating }}%</span>
     </div>
   </div>
+  </div>
+</div>
 
-<!--  ______________________________________________________________         -->
+
 <div class="well well-lg">
   <div class = "textinjumbotron">
   <h3 style="color:#007acc;"><u>Other Flights That Fly on The Same Route</u></h3>
