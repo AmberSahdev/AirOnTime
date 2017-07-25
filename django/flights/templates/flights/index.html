@@ -14,7 +14,6 @@
 <body>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <a class="navbar-brand" href="/" style="color:#007acc;">AirOnTime</a>
       </div>
@@ -24,21 +23,14 @@
         <li><a href="/about/">About</a></li>
         <li><a href="/contact/">Contact</a></li>
       </ul>
-    </div><!-- /.container-fluid -->
+    </div>
   </nav>
 
 
-
-    <br><br><br>
-    <!--
-    <h3 ><mark style="color:#007acc; opacity: 0.70;">Want to know how reliable your flight is?</mark></h3>
-    <h3 ><mark style="color:#007acc; opacity: 0.70;">Enter your flight information</mark></h3>
-    -->
+<div class="container-fluid frontpage center">
     <h3 style="color:#007acc;">Want to know how reliable your flight is?</h3>
     <h3 style="color:#007acc;">Enter your flight information</h3>
 
-
-<div class="container-fluid">
     <form class="form-inline" method="post"> {% csrf_token %}
       <select class = "opacity" name="airline">
         <option value="select">Select Airlines</option>

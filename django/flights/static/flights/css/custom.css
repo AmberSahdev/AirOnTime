@@ -1,6 +1,4 @@
 body {
-  /*margin-left: 16px;*/
-  text-align: center;
   left: 0;
   right: 0;
 
@@ -18,18 +16,12 @@ body {
 }
 
 .center{
-    position:absolute;
-    width:780px;
-    height:650px;
-    left:50%;
-    top:50%;
-    margin-left:-390px;
-    margin-top:-325px;
+  text-align: center;
 }
 
 input {
   line-height: normal;
-  opacity: 0.75;
+  opacity: 0.83;
   font-weight: bold;
   color: black;
 }
@@ -54,7 +46,6 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-
 
 .glyphicon {
   position: relative;
@@ -90,7 +81,6 @@ input[type="search"]::-webkit-search-decoration {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
-    /* opacity: 0.8; */
   }
 
 .center {
@@ -118,9 +108,8 @@ text-align: center;
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
           box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-  opacity: 0.75;
+  opacity: 0.85;
 }
-
 
 h1,
 .h1 {
@@ -130,7 +119,6 @@ h1,
   padding-bottom: 2px;
   padding-top: 2px;
 }
-
 
 .display-3 {
   font-weight: bold;
@@ -145,7 +133,7 @@ h1,
 }
 
 .opacity {
-  opacity: 0.75;
+  opacity: 0.83;
   width:139px;
   height:35px;
 }
@@ -180,4 +168,8 @@ h3,
   font-weight: bold;
   padding-bottom: 0px;
   padding-top: 0px;
+}
+
+.frontpage {
+  padding-top: 6%;
 }
