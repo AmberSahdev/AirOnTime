@@ -25,3 +25,8 @@ class DisplayFlight(models.Model):
     OTR = models.PositiveSmallIntegerField()
     scheduled_departure_time = models.PositiveSmallIntegerField() #24 hour time
     scheduled_arrival_time = models.PositiveSmallIntegerField() #24 hour time
+    n = models.PositiveSmallIntegerField(default = 0)
+    x = models.PositiveIntegerField(default = 0)
+    c = models.PositiveSmallIntegerField(default = 0)
+    Y = models.DecimalField(max_digits=10, decimal_places=2, default = -1) #arbitarily set max digits to 10 ALSO default is -1 so we know if we have no data
+    last_updated = models.DateTimeField()
